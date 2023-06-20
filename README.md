@@ -15,7 +15,6 @@
         border-radius: 5px;
         padding: 15px;
       }
-
       .display {
         background-color:#f5f5f5;
         border: 2px solid #ccc;
@@ -24,13 +23,11 @@
         text-align: right;
         margin-bottom: 10px;
       }
-
       .buttons {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 7px;
       }
-
       button {
         background-color: #f5f5f5;
         border: 1px solid #ccc;
@@ -39,19 +36,15 @@
         padding: 10px;
         cursor: pointer;
       }
-
       .number {
         grid-column: span 1;
       }
-
       .operator {
         grid-column: span 1;
       }
-
       .clear {
         grid-column: span 2;
       }
-
       .equal {
         grid-column: span 2;
       }
@@ -88,23 +81,19 @@
     <script>
       const input = document.getElementById('input');
       const buttons = document.querySelectorAll('.buttons button');
-
       let currentInput = '';
       let previousInput = '';
       let operation = '';
-
       function updateInput(value) {
         currentInput += value;
         input.value = currentInput;
       }
-
       function clearInput() {
         currentInput = '';
         previousInput = '';
         operation = '';
         input.value = '';
       }
-
       function calculate() {
         let result = 0;
         switch (operation) {
@@ -128,7 +117,6 @@
         previousInput = '';
         operation = '';
       }
-
       buttons.forEach(button => {
         button.addEventListener('click', () => {
           const value = button.textContent;
